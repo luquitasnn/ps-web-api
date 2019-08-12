@@ -12,7 +12,10 @@ module.exports = {
   },
   production: {
     client: 'pg',
-    port: 5433,
-    connection: process.env.DATABASE_URL
+    connection: process.env.DATABASE_URL + `?ssl=true`,
+    migrations: {
+      directory: './db/migrations'
+    },
+    useNullAsDefault: true
   },
 };
