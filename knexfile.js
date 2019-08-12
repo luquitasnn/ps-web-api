@@ -1,5 +1,7 @@
 // Update with your config settings.
 
+
+
 module.exports = {
 
   development: {
@@ -10,4 +12,5 @@ module.exports = {
     client: 'pg',
     connection: process.env.DATABASE_URL,
   },
+  
 };

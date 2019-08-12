@@ -15,9 +15,11 @@ function validCase (myCase) {
     return hasNExpte;
 };
 
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
     queries.getAll().then(cases => {
         res.json(cases);
+       // console.log('Detail: ', req, res, cases, next);
+       console.log ('DB URL: ', process.env.DATABASE_URL);
     })
 });
 
